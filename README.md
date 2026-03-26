@@ -128,7 +128,7 @@ class="center">
 Visual comparisons on Scannet++ dataset:
 
 <p align="center">
-<img src="./results/scannetpp_comparison" width=100% height=100% 
+<img src="./results/scannetpp_comparison.png" width=100% height=100% 
 class="center">
 </p>
 
