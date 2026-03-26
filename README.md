@@ -117,6 +117,27 @@ The evaluation code is integrated into `train.py`, so evaluation will run automa
 python train.py -s data/DATASET_NAME/SCAN_ID -o output/DATASET_NAME/SCAN_ID --sfm_config posed --use_view_config --config_view_num 5 --select_inpaint_num 10  --tetra_downsample_ratio 0.25
 ```
 
+## Results
+Visual comparisons on Replica dataset:
+
+<p align="center">
+<img src="./results/replica_comparison.png" width=100% height=100% 
+class="center">
+</p>
+
+Visual comparisons on Scannet++ dataset:
+
+<p align="center">
+<img src="./results/scannetpp_comparison" width=100% height=100% 
+class="center">
+</p>
+
+Visual comparison of ablation study on Replica:
+
+<p align="center">
+<img src="ablation.png" width=100% height=100% 
+class="center">
+</p>
 
 ## Acknowledgements
 Some codes are borrowed from [G4splat](https://github.com/DaLi-Jack/G4Splat), [MAtCha](https://github.com/Anttwo/MAtCha), [See3D](https://github.com/baaivision/See3D), [MASt3R-SfM](https://github.com/naver/mast3r), [DepthAnythingV2](https://github.com/DepthAnything/Depth-Anything-V2), [2DGS](https://github.com/hbb1/2d-gaussian-splatting). We thank all the authors for their great work. 
