@@ -9,7 +9,7 @@
 </p>
 
 ## Abstract
-Reconstructing high-fidelity 3D scenes from images using 3D Gaussian Splatting (3DGS) remains a challenging task due to the discrete nature of Gaussian positions. This challenge is further amplified under sparse-view settings, where limited observations often lead to geometric ambiguities—such as floaters and texture blurring—and, more critically, topological inconsistencies that hinder the extraction of watertight meshes. To address these limitations, we propose a novel framework for high-fidelity indoor surface reconstruction with gaussian splatting via curriculum learning and topology-aware regularization. Our approach is built upon the following two core innovations. First, we introduce a \textbf{Curriculum-based Generative Refinement (CGR)} strategy that leverages a generative diffusion model to hallucinate missing regions while preserving multi-view consistency, progressively expanding the training views from observed to unobserved regions for robust geometry completion. Second, we propose a novel \textbf{Topology-aware Regularization (TR)} module that constructs an anisotropic graph of Gaussians and employs spectral analysis to detect structural disconnections, actively repairing them via geometry-aware bridging and densification. Extensive qualitative and quantitative experiments on the Replica and ScanNet++ datasets demonstrate that our method consistently outperforms state-of-the-art approaches in terms of geometric accuracy (Chamfer Distance, F-Score and Normal Consistency), yielding high-fidelity 3D mesh reconstructions. We will make our code publicly available upon publication.
+Reconstructing high-fidelity 3D scenes from images using 3D Gaussian Splatting (3DGS) remains a challenging task due to the discrete nature of Gaussian positions. This challenge is further amplified under sparse-view settings, where limited observations often lead to geometric ambiguities—such as floaters and texture blurring—and, more critically, topological inconsistencies that hinder the extraction of watertight meshes. To address these limitations, we propose a novel framework for high-fidelity indoor surface reconstruction with gaussian splatting via curriculum learning and topology-aware regularization. Our approach is built upon the following two core innovations. First, we introduce a \textbf{Curriculum-based Generative Refinement (CGR)} strategy that leverages a generative diffusion model to hallucinate missing regions while preserving multi-view consistency, progressively expanding the training views from observed to unobserved regions for robust geometry completion. Second, we propose a novel \textbf{Topology-aware Regularization (TR)} module that constructs an anisotropic graph of Gaussians and employs spectral analysis to detect structural disconnections, actively repairing them via geometry-aware bridging and densification. Extensive qualitative and quantitative experiments on the Replica and ScanNet++ datasets demonstrate that our method consistently outperforms state-of-the-art approaches in terms of geometric accuracy (Chamfer Distance, F-Score and Normal Consistency), yielding high-fidelity 3D mesh reconstructions.
 
 ## 1. Installation
 
@@ -117,6 +117,27 @@ The evaluation code is integrated into `train.py`, so evaluation will run automa
 python train.py -s data/DATASET_NAME/SCAN_ID -o output/DATASET_NAME/SCAN_ID --sfm_config posed --use_view_config --config_view_num 5 --select_inpaint_num 10  --tetra_downsample_ratio 0.25
 ```
 
+## Results
+Visual comparisons on Replica dataset:
+
+<p align="center">
+<img src="./results/replica_comparison.png" width=100% height=100% 
+class="center">
+</p>
+
+Visual comparisons on Scannet++ dataset:
+
+<p align="center">
+<img src="./results/scannetpp_comparison.png" width=100% height=100% 
+class="center">
+</p>
+
+Visual comparison of ablation study on Replica:
+
+<p align="center">
+<img src="./results/ablation.png" width=100% height=100% 
+class="center">
+</p>
 
 ## Acknowledgements
 Some codes are borrowed from [G4splat](https://github.com/DaLi-Jack/G4Splat), [MAtCha](https://github.com/Anttwo/MAtCha), [See3D](https://github.com/baaivision/See3D), [MASt3R-SfM](https://github.com/naver/mast3r), [DepthAnythingV2](https://github.com/DepthAnything/Depth-Anything-V2), [2DGS](https://github.com/hbb1/2d-gaussian-splatting). We thank all the authors for their great work. 
