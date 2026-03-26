@@ -135,7 +135,7 @@ class="center">
 Visual comparison of ablation study on Replica:
 
 <p align="center">
-<img src="ablation.png" width=100% height=100% 
+<img src="./results/ablation.png" width=100% height=100% 
 class="center">
 </p>
 
