@@ -5,7 +5,9 @@
 <p align="center">
     <a href="">Haihong Xiao </a>,
     <a href="">Jiaqing Li </a>,
-    <a href="">Jianan Zou </a>
+    <a href="">Jianan Zou </a>,
+    <a href="">Yang Zhao </a>,
+    <a href="">Wei Jia </a>
 </p>
 
 ## Abstract
